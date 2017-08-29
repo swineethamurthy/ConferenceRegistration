@@ -4,24 +4,40 @@ public class Registration {
 
 	Integer sessionID;
 	String userEmailId;
+	Users userDetails;
+	Sessions session = new Sessions();
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public boolean chooseSession(Integer selectedSessionID) {
+		this.sessionID = selectedSessionID;
+		if (selectedSessionID != 0) {
+			return false;
+		} else {
+			return true;
+		}
 
 	}
 
-	public  void displayAvailableSessions() {
+	public void setUserDetails(String userEmailID, String userName, String userMobile) {
+		userDetails.feedUserDetails(userEmailID, userName, userMobile);
 	}
 
-	public  void feedUserDetails() {
+	public boolean checkExistingRegistration(String userEmailID) 
+	{
+		
+		if(userEmailID!=null) //to check the user exists in the db already
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
-	public  void updateNumberOfAvailableSeatsForTheSession() {
+	public void showRegistrationDetails() {
 	}
 
-	public  void showRegistrationDetails() {
-	}
+	public void notifyRegistrationConfirmation() {
 
-	public  void notifyRegistrationConfirmation() {
 	}
 }

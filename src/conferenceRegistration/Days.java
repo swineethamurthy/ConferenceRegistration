@@ -9,7 +9,9 @@ public class Days {
 	Integer numberOfSessions;
 	Date date;
 	
+	
 	public static void showNumberOfDaysAndSessions() {
+		
 	}
 
 }
